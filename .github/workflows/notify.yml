@@ -1,0 +1,21 @@
+name: Phrase Notification
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # 9am ET
+    - cron: '0 18 * * *'   # 1pm ET
+    - cron: '0 23 * * *'   # 6pm ET
+  workflow_dispatch:        # manual trigger for testing
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node notify.js
+        env:
+          PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
+          PUSHOVER_USER:  ${{ secrets.PUSHOVER_USER }}

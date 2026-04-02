@@ -16,7 +16,7 @@ const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, o
   }
 
   function handleTouchMove(e) {
-    if (!touchStart.current || !flipped) return
+    if (!touchStart.current) return
     const dx = e.touches[0].clientX - touchStart.current.x
     const dy = e.touches[0].clientY - touchStart.current.y
     if (isDragging.current || (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 6)) {
@@ -59,6 +59,7 @@ const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, o
         style={{
           width: '100%',
           height: '100%',
+          position: 'relative',
           transform: drag ? `translateX(${drag}px) rotate(${drag * 0.025}deg)` : undefined,
           transition: settling ? 'transform 0.32s cubic-bezier(0.4,0,0.2,1)' : 'none',
           willChange: 'transform',
@@ -67,20 +68,20 @@ const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, o
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
+        {drag !== 0 && (
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: tintColor,
+            borderRadius: 'var(--radius)',
+            zIndex: 10,
+            pointerEvents: 'none',
+          }} />
+        )}
         <div
           ref={ref}
           className={`flashcard${flipped ? ' flipped' : ''}`}
           onClick={onFlip}
         >
-          {drag !== 0 && (
-            <div style={{
-              position: 'absolute', inset: 0,
-              background: tintColor,
-              borderRadius: 'var(--radius)',
-              zIndex: 10,
-              pointerEvents: 'none',
-            }} />
-          )}
 
           <div className="card-face card-front">
             <div className="card-front-quote">{phrase.text}</div>

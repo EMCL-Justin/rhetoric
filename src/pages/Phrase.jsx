@@ -22,7 +22,6 @@ export default function Phrase() {
   }
 
   function handleAnswer(got) {
-    if (!flipped) return
     markSeen(phrase.id)
     if (got) markLearned(phrase.id)
     setDone(true)

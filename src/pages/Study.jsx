@@ -56,7 +56,6 @@ export default function Study() {
   }
 
   function handleAnswer(got) {
-    if (!flipped) return
     const id = deck[0]
     markSeen(id)
 

@@ -134,9 +134,7 @@ export default function Study() {
           ✓&nbsp; Got It
         </button>
       </div>
-      <div className="study-subhint">
-        {!hasFlipped ? 'Tap to flip' : '← Study More\u00a0\u00a0·\u00a0\u00a0Got It →'}
-      </div>
+      {hasFlipped && <div className="study-subhint">Swipe to answer</div>}
     </div>
   )
 }

@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <div className="header">
         <div className="header-wordmark">Rhetoric</div>
         <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
-          {theme === 'dark' ? '☀' : '☾'}
+          {theme === 'dark' ? '☀' : '◑'}
         </button>
       </div>
       <nav className="tabs">

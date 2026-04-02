@@ -1,15 +1,37 @@
-import { forwardRef } from 'react'
+import { forwardRef, useRef } from 'react'
 import { CAT_LABELS } from '../data/phrases'
 import { getAuthorBio } from '../data/authors'
 
-const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, onFlip }, ref) {
+const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, onFlip, onSwipe }, ref) {
   const bio = getAuthorBio(phrase.attribution)
+  const touchStart = useRef(null)
+
+  function handleTouchStart(e) {
+    const t = e.touches[0]
+    touchStart.current = { x: t.clientX, y: t.clientY }
+  }
+
+  function handleTouchEnd(e) {
+    if (!touchStart.current) return
+    e.preventDefault() // prevent the synthetic click from also firing
+    const t = e.changedTouches[0]
+    const dx = t.clientX - touchStart.current.x
+    const dy = t.clientY - touchStart.current.y
+    touchStart.current = null
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 60) {
+      onSwipe?.(dx > 0 ? 'right' : 'left')
+    } else {
+      onFlip()
+    }
+  }
 
   return (
     <div className="card-scene">
       <div
         ref={ref}
         className={`flashcard${flipped ? ' flipped' : ''}`}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         onClick={onFlip}
       >
         <div className="card-face card-front">

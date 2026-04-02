@@ -123,6 +123,7 @@ export default function Study() {
         flipped={flipped}
         hasFlipped={hasFlipped}
         onFlip={handleFlip}
+        onSwipe={dir => handleAnswer(dir === 'right')}
       />
 
       <div className="study-actions">
@@ -133,9 +134,9 @@ export default function Study() {
           ✓&nbsp; Got It
         </button>
       </div>
-      {!hasFlipped && (
-        <div className="study-subhint">Tap the card to flip it &nbsp;·&nbsp; ← → arrow keys also work</div>
-      )}
+      <div className="study-subhint">
+        {!hasFlipped ? 'Tap to flip' : '← Study More\u00a0\u00a0·\u00a0\u00a0Got It →'}
+      </div>
     </div>
   )
 }

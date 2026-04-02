@@ -52,6 +52,7 @@ export default function Phrase() {
         flipped={flipped}
         hasFlipped={hasFlipped}
         onFlip={handleFlip}
+        onSwipe={dir => handleAnswer(dir === 'right')}
       />
 
       <div className="study-actions">

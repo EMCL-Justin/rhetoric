@@ -55,7 +55,7 @@ export default function Study() {
     setFlipped(f => !f)
   }
 
-  function handleAnswer(got) {
+  function handleAnswer(got, fromSwipe = false) {
     const id = deck[0]
     markSeen(id)
 
@@ -68,7 +68,7 @@ export default function Study() {
         setComplete(true)
         return
       }
-      animateAndAdvance(got, newDeck)
+      fromSwipe ? applyDeck(newDeck) : animateAndAdvance(got, newDeck)
     } else {
       const remaining = deck.slice(1)
       let newDeck
@@ -81,8 +81,13 @@ export default function Study() {
         r.splice(Math.min(pos, r.length), 0, id)
         newDeck = r
       }
-      animateAndAdvance(got, newDeck)
+      fromSwipe ? applyDeck(newDeck) : animateAndAdvance(got, newDeck)
     }
+  }
+
+  function applyDeck(newDeck) {
+    setDeck(newDeck)
+    setFlipped(false)
   }
 
   function animateAndAdvance(got, newDeck) {
@@ -122,7 +127,7 @@ export default function Study() {
         flipped={flipped}
         hasFlipped={hasFlipped}
         onFlip={handleFlip}
-        onSwipe={dir => handleAnswer(dir === 'right')}
+        onSwipe={dir => handleAnswer(dir === 'right', true)}
       />
 
       <div className="study-actions">

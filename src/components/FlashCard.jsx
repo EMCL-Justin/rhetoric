@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from 'react'
+import { forwardRef, useRef, useState, useEffect } from 'react'
 import { CAT_LABELS } from '../data/phrases'
 import { getAuthorBio } from '../data/authors'
 
@@ -8,6 +8,14 @@ const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, o
   const isDragging = useRef(false)
   const [drag, setDrag] = useState(0)
   const [settling, setSettling] = useState(false)
+
+  // Reset drag when a new card arrives
+  useEffect(() => {
+    setDrag(0)
+    setSettling(false)
+    isDragging.current = false
+    touchStart.current = null
+  }, [phrase.id])
 
   function handleTouchStart(e) {
     touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }
@@ -35,16 +43,20 @@ const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, o
     isDragging.current = false
 
     if (!wasDragging) {
+      // tap
       setDrag(0)
       onFlip()
     } else if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) {
-      setDrag(0)
-      onSwipe?.(dx > 0 ? 'right' : 'left')
+      // committed swipe — fly card off screen, then notify parent
+      const dir = dx > 0 ? 'right' : 'left'
+      setSettling(true)
+      setDrag(dir === 'right' ? 600 : -600)
+      setTimeout(() => onSwipe?.(dir), 260)
     } else {
-      // snap back
+      // not enough — snap back
       setSettling(true)
       setDrag(0)
-      setTimeout(() => setSettling(false), 300)
+      setTimeout(() => setSettling(false), 320)
     }
   }
 
@@ -61,7 +73,7 @@ const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, o
           height: '100%',
           position: 'relative',
           transform: drag ? `translateX(${drag}px) rotate(${drag * 0.025}deg)` : undefined,
-          transition: settling ? 'transform 0.32s cubic-bezier(0.4,0,0.2,1)' : 'none',
+          transition: settling ? 'transform 0.26s cubic-bezier(0.4,0,0.2,1)' : 'none',
           willChange: 'transform',
         }}
         onTouchStart={handleTouchStart}
@@ -82,7 +94,6 @@ const FlashCard = forwardRef(function FlashCard({ phrase, flipped, hasFlipped, o
           className={`flashcard${flipped ? ' flipped' : ''}`}
           onClick={onFlip}
         >
-
           <div className="card-face card-front">
             <div className="card-front-quote">{phrase.text}</div>
             <div className="card-front-attr">

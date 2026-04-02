@@ -2,9 +2,9 @@ name: Phrase Notification
 
 on:
   schedule:
-    - cron: '0 14 * * *'   # 9am ET
-    - cron: '0 18 * * *'   # 1pm ET
-    - cron: '0 23 * * *'   # 6pm ET
+    - cron: '0 16 * * *'   # 12pm ET
+    - cron: '0 20 * * *'   #  4pm ET
+    - cron: '0  1 * * *'   #  9pm ET
   workflow_dispatch:        # manual trigger for testing
 
 jobs:

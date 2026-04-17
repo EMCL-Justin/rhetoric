@@ -99,4 +99,154 @@ export const PHRASES = [
   // Talleyrand
   { id:61, text:"They have learned nothing and forgotten nothing.", meaning:"Said of the Bourbon dynasty returning to power after Napoleon — unchanged by exile, unchastened by catastrophe. The ultimate indictment: to have been destroyed by history and still arrive back with the same assumptions intact.", attribution:"Charles Maurice de Talleyrand", category:"conflict" },
   { id:62, text:"Speech was given to man to disguise his thoughts.", meaning:"Language is not merely for communication — it is a tool of concealment. The sophisticated operator understands that what is said and what is meant are not the same thing, and acts accordingly.", attribution:"Charles Maurice de Talleyrand (attributed)", category:"rhetoric" },
+
+  // JP Morgan
+  { id:63, text:"A man always has two reasons for doing anything: a good reason and the real reason.", meaning:"Surface justifications are almost never the true ones. The skilled operator learns to read past the stated rationale — in negotiation, in politics, in court — to the actual motive underneath.", attribution:"J.P. Morgan", category:"power" },
+
+  // Bismarck
+  { id:64, text:"Not by speeches and votes of the majority are the great questions of the time decided, but by iron and blood.", meaning:"The decisive forces in history are not rhetoric and democratic process — they are force and will. Bismarck's blunt dismissal of idealism: the world is moved by power, not persuasion.", attribution:"Otto von Bismarck", source:"Speech to Prussian Parliament, 1862", category:"power" },
+
+  // Demosthenes
+  { id:65, text:"Nothing is easier than self-deceit. For what each man wishes, that he also believes to be true.", meaning:"The most dangerous lies are the ones we tell ourselves. Desire warps perception — we see evidence for what we want to be true and dismiss what contradicts it. The disciplined mind fights this constantly.", attribution:"Demosthenes", category:"rhetoric" },
+
+  // Nixon farewell
+  { id:66, text:"Always remember, others may hate you. And those who hate you don't win unless you hate them — and then you destroy yourself.", meaning:"Hatred directed at you is only dangerous if you return it. The moment you hate back, you've given your enemy the victory. Nixon's most lucid insight, delivered as his career ended.", attribution:"Richard Nixon", source:"Farewell Address, 1974", category:"power" },
+
+  // Richard III
+  { id:67, text:"I am determined to prove a villain, and hate the idle pleasures of these days.", meaning:"Richard III's opening declaration — the self-aware, unrepentant embrace of ambition and malice. The most dangerous adversary is one who has consciously chosen ruthlessness and wears it openly.", attribution:"William Shakespeare", source:"Richard III, Act I", category:"literary" },
+
+  // Cicero sinews of war
+  { id:68, text:"The sinews of war are infinite money.", meaning:"Military power, political power, and legal power all rest on financial power. Money is not the goal — it is the enabler of every other goal. Those who forget this learn it the hard way.", attribution:"Marcus Tullius Cicero", source:"Philippics", category:"strategy" },
+
+  // Iago
+  { id:69, text:"I am not what I am.", meaning:"Iago's three-word declaration of intent — the complete philosophy of the sophisticated manipulator. Identity is a performance. What others see is what you choose to show them, and no more.", attribution:"William Shakespeare", source:"Othello, Act I (Iago)", category:"literary" },
+
+  // De Gaulle - servant/master
+  { id:70, text:"In order to become the master, the politician poses as the servant.", meaning:"The path to power runs through the appearance of selflessness. Those who seek authority rarely announce it — they cloak the ambition in the language of service until the position is secure.", attribution:"Charles de Gaulle", category:"power" },
+
+  // Napoleon - interrupt enemy
+  { id:71, text:"Never interrupt your enemy when he is making a mistake.", meaning:"Restraint is its own weapon. When your adversary is sabotaging himself, the worst thing you can do is intervene. Stay quiet, let the error compound, and collect the consequences.", attribution:"Napoleon Bonaparte", category:"strategy" },
+
+  // Napoleon - stupidity
+  { id:72, text:"In politics, stupidity is not a handicap.", meaning:"Intelligence is neither required nor reliable as a predictor of political success. The forces that determine outcomes — loyalty, fear, tribalism, money — operate independently of reason.", attribution:"Napoleon Bonaparte", category:"rhetoric" },
+
+  // Napoleon - history
+  { id:73, text:"History is a set of lies agreed upon.", meaning:"The official record is always the record written by whoever controls the narrative. Facts are less durable than consensus — and consensus is manufactured by the powerful.", attribution:"Napoleon Bonaparte", category:"rhetoric" },
+
+  // Kissinger - aphrodisiac
+  { id:74, text:"Power is the ultimate aphrodisiac.", meaning:"Authority over others is inherently seductive — both to those who hold it and to those around them. Anyone who believes they are immune to this dynamic has not yet held enough of it.", attribution:"Henry Kissinger", category:"power" },
+
+  // Kissinger - illegal
+  { id:75, text:"The illegal we do immediately. The unconstitutional takes a little longer.", meaning:"A dark joke from inside the machinery of power — and a genuine insight into how those at the top relate to legal constraints. Rules are administered differently at different altitudes.", attribution:"Henry Kissinger", source:"Staff Meeting, 1975", category:"power" },
+
+  // TR - Man in the Arena
+  { id:76, text:"It is not the critic who counts; not the man who points out how the strong man stumbles. The credit belongs to the man who is actually in the arena.", meaning:"The judgment of those who never risk anything is worth nothing. The only opinion that matters is the verdict of action — to enter the fight, take the damage, and keep going.", attribution:"Theodore Roosevelt", source:"Citizenship in a Republic, 1910", category:"resilience" },
+
+  // Lady Macbeth
+  { id:77, text:"Look like the innocent flower, but be the serpent under it.", meaning:"Lady Macbeth's counsel on operational concealment: the most effective strategy wears the face of harmlessness. Danger that announces itself is danger that can be prepared for.", attribution:"William Shakespeare", source:"Macbeth, Act I (Lady Macbeth)", category:"strategy" },
+
+  // Sun Tzu - subdue without fighting
+  { id:78, text:"The supreme art of war is to subdue the enemy without fighting.", meaning:"Victory through force is expensive and uncertain. The highest skill is arranging conditions so that the adversary cannot or will not fight — through positioning, alliance, and psychological pressure.", attribution:"Sun Tzu", source:"The Art of War", category:"strategy" },
+
+  // Sun Tzu - appear weak
+  { id:79, text:"Appear weak when you are strong, and strong when you are weak.", meaning:"Managing your adversary's perception of you is itself a form of combat. The strong invite attack; the weak invite underestimation. Control what your enemy believes, and you control the engagement.", attribution:"Sun Tzu", source:"The Art of War", category:"strategy" },
+
+  // Mencken - urge to save
+  { id:80, text:"The urge to save humanity is almost always only a false face for the urge to rule it.", meaning:"Altruism at scale deserves scrutiny. The reformer, the ideologue, the crusader — examine the impulse carefully and you will often find the will to power wearing the costume of benevolence.", attribution:"H.L. Mencken", category:"morality" },
+
+  // Mencken - simple answers
+  { id:81, text:"For every complex problem there is an answer that is clear, simple, and wrong.", meaning:"Simplicity is seductive and almost always false. Reality is resistant to clean solutions. Anyone offering one is either naive about the problem or dishonest about the answer.", attribution:"H.L. Mencken", category:"rhetoric" },
+
+  // Henry Adams
+  { id:82, text:"Politics is the systematic organization of hatreds.", meaning:"Political coalitions are not built on shared visions — they are built on shared enemies. The glue of any movement is less what it is for than what, and who, it is against.", attribution:"Henry Adams", source:"The Education of Henry Adams", category:"power" },
+
+  // Cicero - ignorance of history
+  { id:83, text:"To be ignorant of what occurred before you were born is to remain always a child.", meaning:"Without historical context, every crisis seems unprecedented and every precedent seems novel. The person without history is permanently naive — manipulable by anyone who has read more than they have.", attribution:"Marcus Tullius Cicero", source:"Orator", category:"rhetoric" },
+
+  // Buffett - tide
+  { id:84, text:"Only when the tide goes out do you discover who's been swimming naked.", meaning:"In good conditions, incompetence and recklessness are invisible — they are covered by the rising water. It is only in adversity that real exposure, real risk, and real character are revealed.", attribution:"Warren Buffett", category:"strategy" },
+
+  // Vanderbilt
+  { id:85, text:"Law? What do I care about the law? Ain't I got the power?", meaning:"The blunt confession of a man who understood that legal constraints operate differently depending on your resources. Not admirable — but honest about how power has always related to rules.", attribution:"Cornelius Vanderbilt (attributed)", category:"power" },
+
+  // Lombardi
+  { id:86, text:"Winning isn't everything — it's the only thing.", meaning:"Not a counsel of immorality but of total commitment. The person who treats winning as one of several acceptable outcomes will lose to the person who does not. Decide what you are here to do.", attribution:"Vince Lombardi", category:"ambition" },
+
+  // Patton
+  { id:87, text:"Lead me, follow me, or get out of my way.", meaning:"The only three acceptable positions in a serious endeavor. Neutrality is not an option — it is just a passive form of obstruction. The man in charge does not wait for the uncommitted to find their footing.", attribution:"George S. Patton", category:"conflict" },
+
+  // Wilde - forgive enemies
+  { id:88, text:"Always forgive your enemies; nothing annoys them so much.", meaning:"Forgiveness deployed strategically is a weapon. It denies your enemy the satisfaction of your resentment, occupies the moral high ground, and — most usefully — irritates them deeply.", attribution:"Oscar Wilde", category:"conflict" },
+
+  // Dostoyevsky
+  { id:89, text:"To go wrong in one's own way is better than to go right in someone else's.", meaning:"Authentic error is worth more than borrowed correctness. The person who fails by their own judgment learns something; the person who succeeds by following others learns nothing and owns nothing.", attribution:"Fyodor Dostoyevsky", source:"Crime and Punishment", category:"morality" },
+
+  // Fitzgerald - two ideas
+  { id:90, text:"The test of a first-rate intelligence is the ability to hold two opposed ideas in the mind at the same time, and still retain the ability to function.", meaning:"Intellectual maturity is not certainty — it is the capacity to carry contradiction without being paralyzed by it. The person who needs resolution before acting is poorly equipped for a complex world.", attribution:"F. Scott Fitzgerald", source:"The Crack-Up", category:"rhetoric" },
+
+  // Richelieu
+  { id:91, text:"If you give me six lines written by the hand of the most honest of men, I will find something in them which will hang him.", meaning:"No one is without exposure. The question is never whether a target is vulnerable but whether anyone is looking hard enough. Power protects; exposure is a function of enemies, not guilt.", attribution:"Cardinal Richelieu (attributed)", category:"power" },
+
+  // JFK
+  { id:92, text:"Forgive your enemies, but never forget their names.", meaning:"Mercy and memory are not mutually exclusive. The magnanimous gesture costs nothing if you maintain a precise accounting of who did what, and when. Grace is not naivety.", attribution:"John F. Kennedy (attributed)", category:"conflict" },
+
+  // Clemenceau
+  { id:93, text:"War is too serious a matter to entrust to military men.", meaning:"The people who fight wars are poorly positioned to decide whether to fight them — their training, identity, and incentives all run in one direction. The decision to use force requires a mind outside the machinery.", attribution:"Georges Clemenceau", category:"strategy" },
+
+  // De Gaulle - graveyards
+  { id:94, text:"The graveyards are full of indispensable men.", meaning:"No one is actually irreplaceable — not you, not the institution, not the movement. The belief in one's own indispensability is flattering and dangerous. The work goes on without everyone eventually.", attribution:"Charles de Gaulle (attributed)", category:"power" },
+
+  // Lincoln - fool people
+  { id:95, text:"You can fool all the people some of the time, and some of the people all the time, but you cannot fool all the people all the time.", meaning:"Deception has limits. Short-term manipulation is always available; durable, total deception is not. The operator who builds on lies is building on a foundation with a known expiration date.", attribution:"Abraham Lincoln (attributed)", category:"rhetoric" },
+
+  // Pericles
+  { id:96, text:"The secret to happiness is freedom. And the secret to freedom is courage.", meaning:"Freedom is not granted — it is maintained by the willingness to defend it at cost. The comfortable life purchased by compliance is not freedom; it is a more pleasant captivity.", attribution:"Pericles (via Thucydides)", source:"Funeral Oration", category:"resilience" },
+
+  // Hemingway - world breaks
+  { id:97, text:"The world breaks everyone, and afterward, many are strong at the broken places.", meaning:"Damage is not the end of strength — it can be the source of it. What survives the breaking is harder than what existed before. The wound and the scar are not the same thing.", attribution:"Ernest Hemingway", source:"A Farewell to Arms", category:"resilience" },
+
+  // Von Moltke
+  { id:98, text:"No plan survives contact with the enemy.", meaning:"Planning is essential and plans are temporary. The point of preparation is not a perfect script — it is the judgment and adaptability to respond when reality deviates from the plan, which it always does.", attribution:"Helmuth von Moltke the Elder (paraphrased)", category:"strategy" },
+
+  // Fitzgerald - boats
+  { id:99, text:"So we beat on, boats against the current, borne back ceaselessly into the past.", meaning:"The closing line of The Great Gatsby — the condition of human ambition. We push forward while forces pull us back. The effort is real even when the destination is unreachable.", attribution:"F. Scott Fitzgerald", source:"The Great Gatsby", category:"literary" },
+
+  // Faulkner
+  { id:100, text:"The past is never dead. It's not even past.", meaning:"History is not safely behind us — it is present, active, and continuing to generate consequences. Those who believe they have escaped the past are most thoroughly in its grip.", attribution:"William Faulkner", source:"Requiem for a Nun", category:"literary" },
+
+  // Twain - easier to fool
+  { id:101, text:"It's easier to fool people than to convince them that they have been fooled.", meaning:"The mind defends the beliefs it holds. Admitting deception requires admitting vulnerability — and most people will construct elaborate rationalizations rather than accept that they were manipulated.", attribution:"Mark Twain (attributed)", category:"rhetoric" },
+
+  // Twain - majority
+  { id:102, text:"Whenever you find yourself on the side of the majority, it is time to pause and reflect.", meaning:"Consensus is not evidence. The majority is frequently wrong, always late, and often the last to know. The point at which everyone agrees is often the point at which the smart money is already moving.", attribution:"Mark Twain", category:"morality" },
+
+  // Nietzsche
+  { id:103, text:"There are no facts, only interpretations.", meaning:"What we call objective reality is always mediated by the frameworks we bring to it. Every fact is selected, framed, and presented by someone with a perspective. Understanding this is not nihilism — it is literacy.", attribution:"Friedrich Nietzsche", source:"Notebooks", category:"rhetoric" },
+
+  // Shaw - cynicism
+  { id:104, text:"The power of accurate observation is commonly called cynicism by those who have not got it.", meaning:"What optimists call cynicism is often simply the discipline of seeing clearly. The 'cynical' view and the realistic view are frequently the same view — the difference is whether you can tolerate it.", attribution:"George Bernard Shaw", category:"rhetoric" },
+
+  // Shaw - democracy
+  { id:105, text:"Democracy is a device that ensures we shall be governed no better than we deserve.", meaning:"Self-governance is not a guarantee of good governance — it is a mirror. The quality of political leadership reflects the quality of the political culture that produces it. You get what you select for.", attribution:"George Bernard Shaw", category:"power" },
+
+  // Frederick the Great
+  { id:106, text:"He who defends everything defends nothing.", meaning:"Spreading resources across every threat leaves none of them adequately protected. The discipline of strategy is choosing what to sacrifice in order to secure what matters most.", attribution:"Frederick the Great", category:"strategy" },
+
+  // Iago - good name
+  { id:107, text:"He that filches from me my good name robs me of that which not enriches him, and makes me poor indeed.", meaning:"Reputation is not merely social currency — it is the foundation of every other form of power. Its theft leaves the victim impoverished and the thief no better off. The malice is the point.", attribution:"William Shakespeare", source:"Othello, Act III (Iago)", category:"literary" },
+
+  // Marcus Aurelius
+  { id:108, text:"If it is not right, do not do it; if it is not true, do not say it.", meaning:"A deceptively simple rule that, if actually followed, would eliminate most of what passes for strategy and communication. The discipline required to live by it is the discipline of a lifetime.", attribution:"Marcus Aurelius", source:"Meditations", category:"morality" },
+
+  // John Adams
+  { id:109, text:"Facts are stubborn things; and whatever may be our wishes, our inclinations, or the dictates of our passions, they cannot alter the state of facts and evidence.", meaning:"Reality does not negotiate. No force of will, no intensity of desire, no political consensus makes the false true. The advocate who ignores inconvenient facts does not defeat them — he is eventually destroyed by them.", attribution:"John Adams", source:"Defense of the British Soldiers, 1770", category:"justice" },
+
+  // Schopenhauer
+  { id:110, text:"All truth passes through three stages: first, it is ridiculed; second, it is violently opposed; third, it is accepted as self-evident.", meaning:"Correct ideas do not win on merit alone — they win by outlasting resistance. The person whose position is mocked and then attacked is often closer to right than the person who is immediately believed.", attribution:"Arthur Schopenhauer", category:"rhetoric" },
+
+  // Keynes
+  { id:111, text:"Practical men who believe themselves to be quite exempt from any intellectual influence are usually the slaves of some defunct economist.", meaning:"No one operates without a theoretical framework — most people simply inherited theirs without noticing. The person who scorns ideas is not free of them; they are merely unaware of which ones are running them.", attribution:"John Maynard Keynes", source:"The General Theory", category:"rhetoric" },
+
+  // Wilde - experience
+  { id:112, text:"Experience is simply the name we give our mistakes.", meaning:"The thing we call wisdom is largely the accumulated record of error — rebranded for respectability. The more experience someone claims, the more they are really telling you about how many times they've been wrong.", attribution:"Oscar Wilde", source:"Lady Windermere's Fan", category:"rhetoric" },
 ]

@@ -8,7 +8,7 @@ import FlashCard from '../components/FlashCard'
 export default function Phrase() {
   const { slug } = useParams()
   const navigate = useNavigate()
-  const { markLearned, markSeen } = useProgress()
+  const { promote, demote } = useProgress()
   const [flipped, setFlipped] = useState(false)
   const [hasFlipped, setHasFlipped] = useState(false)
   const [done, setDone] = useState(false)
@@ -22,8 +22,7 @@ export default function Phrase() {
   }
 
   function handleAnswer(got) {
-    markSeen(phrase.id)
-    if (got) markLearned(phrase.id)
+    got ? promote(phrase.id) : demote(phrase.id)
     setDone(true)
   }
 
@@ -33,7 +32,7 @@ export default function Phrase() {
         <div style={{ fontSize: 48, marginBottom: 16 }}>✓</div>
         <div style={{ fontFamily: 'Georgia, serif', fontSize: 20, marginBottom: 8 }}>Logged.</div>
         <div style={{ color: 'var(--muted)', fontSize: 14, marginBottom: 32 }}>Keep at it — it sticks with repetition.</div>
-        <Link to="/study" className="cta-btn" style={{ marginBottom: 12 }}>Study All Phrases</Link>
+        <Link to="/study" className="cta-btn" style={{ marginBottom: 12 }}>Start Today's Session</Link>
         <Link to="/" className="ghost-btn" style={{ display: 'block', padding: '16px', textAlign: 'center', textDecoration: 'none', background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: '12px', color: 'var(--text)', fontWeight: 600, fontSize: 15 }}>Back to Daily</Link>
       </div>
     )

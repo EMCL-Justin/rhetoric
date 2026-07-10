@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom'
 import { PHRASES, CAT_LABELS } from '../data/phrases'
 import { useProgress } from '../context/ProgressContext'
-import { getDailyPhrase, fmtDate } from '../utils'
+import { getDailyPhrase, fmtDate, sessionStats } from '../utils'
 
 export default function Daily() {
-  const { learned } = useProgress()
+  const { learned, srs } = useProgress()
   const p = getDailyPhrase(PHRASES)
+  const { due, fresh } = sessionStats(srs, PHRASES)
+  const ctaText = due > 0
+    ? `Start Today's Session — ${due} due`
+    : fresh > 0
+      ? `Learn New Phrases — ${Math.min(10, fresh)} cards`
+      : 'All Caught Up — Practice'
 
   return (
     <div className="page">
@@ -21,7 +27,7 @@ export default function Daily() {
         <div className="meaning-label">Meaning</div>
         <div className="daily-meaning">{p.meaning}</div>
       </div>
-      <Link to="/study" className="cta-btn">Study All Phrases</Link>
+      <Link to="/study" className="cta-btn">{ctaText}</Link>
       <div className="progress-pill">
         <span className="progress-pill-icon">🎓</span>
         <span className="progress-pill-text">Phrases learned:</span>

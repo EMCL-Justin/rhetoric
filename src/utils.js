@@ -19,6 +19,40 @@ export function toSlug(phrase) {
   return `${attr}-${words}`
 }
 
+const DAY = 86400000
+
+// Build today's Leitner session: every due card (weakest boxes first, capped
+// at maxSize), topped up to minSize with never-studied cards.
+export function buildSession(srs, phrases, { minSize = 10, maxSize = 15 } = {}) {
+  const now = Date.now()
+  const due = phrases
+    .filter(p => srs[p.id] && srs[p.id].due <= now)
+    .sort((a, b) => (srs[a.id].box - srs[b.id].box) || (srs[a.id].due - srs[b.id].due))
+    .slice(0, maxSize)
+    .map(p => p.id)
+  const fresh = phrases.filter(p => !srs[p.id]).map(p => p.id)
+  const fill = Math.max(0, minSize - due.length)
+  return [...shuffle(due), ...shuffle(fresh).slice(0, fill)]
+}
+
+export function sessionStats(srs, phrases) {
+  const now = Date.now()
+  let due = 0, fresh = 0
+  for (const p of phrases) {
+    const s = srs[p.id]
+    if (!s) fresh++
+    else if (s.due <= now) due++
+  }
+  return { due, fresh }
+}
+
+export function nextDueDays(srs) {
+  const now = Date.now()
+  const upcoming = Object.values(srs).map(s => s.due).filter(d => d > now)
+  if (!upcoming.length) return null
+  return Math.max(1, Math.ceil((Math.min(...upcoming) - now) / DAY))
+}
+
 export function fmtDate() {
   return new Date().toLocaleDateString('en-US', {
     weekday: 'long', month: 'long', day: 'numeric',

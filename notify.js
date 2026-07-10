@@ -12,7 +12,7 @@ const url = `https://rhetoric.gg/phrase/${toSlug(phrase)}`
 const res = await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC}`, {
   method: 'POST',
   headers: {
-    'Title': `— ${phrase.attribution}`,
+    'Title': `- ${phrase.attribution}`,
     'Tags': 'speech_balloon',
     'Click': url,
   },

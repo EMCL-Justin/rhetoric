@@ -249,4 +249,59 @@ export const PHRASES = [
 
   // Wilde - experience
   { id:112, text:"Experience is simply the name we give our mistakes.", meaning:"The thing we call wisdom is largely the accumulated record of error — rebranded for respectability. The more experience someone claims, the more they are really telling you about how many times they've been wrong.", attribution:"Oscar Wilde", source:"Lady Windermere's Fan", category:"rhetoric" },
+
+  // --- Expansion: 113–145 ---
+
+  // Power
+  { id:113, text:"Nearly all men can stand adversity, but if you want to test a man's character, give him power.", meaning:"Hardship is a common examination and most people pass it. Power is the rarer and harder test — it removes external constraints and reveals what a person does when nothing forces them to behave.", attribution:"Abraham Lincoln (attributed)", category:"power" },
+  { id:114, text:"Knowledge itself is power.", meaning:"Information is not an accessory to power — it is its raw material. The one who understands the terrain, the opponent, and the rules commands options the ignorant simply do not have.", attribution:"Francis Bacon", source:"Meditationes Sacrae", category:"power" },
+  { id:115, text:"When you strike at a king, you must kill him.", meaning:"A wounded power is more dangerous than an untouched one. If you move against someone stronger than you, the attempt must be total and final — a failed strike guarantees retaliation from an enemy you have now educated.", attribution:"Ralph Waldo Emerson", category:"power" },
+
+  // Justice
+  { id:116, text:"Injustice anywhere is a threat to justice everywhere.", meaning:"Rights are a system, not a collection of local privileges. Tolerating a violation in one place establishes the precedent that undermines protection in every place — no one's justice is secure while anyone's is negotiable.", attribution:"Martin Luther King Jr.", source:"Letter from Birmingham Jail", category:"justice" },
+  { id:117, text:"The law is reason, free from passion.", meaning:"What separates law from revenge is the removal of emotion. Justice administered in anger is merely retaliation with paperwork — the entire value of legal process lies in its coldness.", attribution:"Aristotle", category:"justice" },
+  { id:118, text:"It is better that ten guilty persons escape than that one innocent suffer.", meaning:"The asymmetry at the foundation of criminal law: wrongful punishment corrupts the system itself, while a guilty man's escape corrupts only one outcome. A state that punishes the innocent has become the criminal.", attribution:"William Blackstone", source:"Commentaries on the Laws of England", category:"justice" },
+
+  // Strategy
+  { id:119, text:"Everybody has a plan until they get punched in the mouth.", meaning:"Plans are hypotheses, and contact with a real opponent is the experiment. The measure of a strategist is not the elegance of the plan but the speed and composure of the adjustment when it fails.", attribution:"Mike Tyson", category:"strategy" },
+  { id:120, text:"Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.", meaning:"Vision without execution accomplishes nothing slowly. Execution without vision accomplishes the wrong things quickly. Winning requires the discipline to hold both at once.", attribution:"Sun Tzu (attributed)", category:"strategy" },
+  { id:121, text:"Amateurs talk strategy. Professionals talk logistics.", meaning:"Grand designs are cheap — anyone can draw arrows on a map. The unglamorous questions of supply, capacity, and sustainment are where campaigns are actually won or lost.", attribution:"Omar Bradley (attributed)", category:"strategy" },
+  { id:122, text:"Take time to deliberate; but when the time for action arrives, stop thinking and go in.", meaning:"Deliberation and action are separate phases and mixing them ruins both. Doubt during planning is diligence; doubt during execution is sabotage.", attribution:"Andrew Jackson", category:"strategy" },
+
+  // Resilience
+  { id:123, text:"He who has a why to live can bear almost any how.", meaning:"Endurance is not a function of strength but of purpose. Suffering becomes survivable the moment it means something — and unbearable the moment it doesn't.", attribution:"Friedrich Nietzsche", category:"resilience" },
+  { id:124, text:"Fall seven times, rise eight.", meaning:"The count that matters is not how many times you go down but whether the number of times you stand is greater by one. Recovery, not avoidance of failure, is the entire skill.", attribution:"Japanese proverb", category:"resilience" },
+  { id:125, text:"Man is not made for defeat. A man can be destroyed but not defeated.", meaning:"Destruction is something done to you; defeat is something you consent to. External forces can take everything except the decision to yield — that one is always yours.", attribution:"Ernest Hemingway", source:"The Old Man and the Sea", category:"resilience" },
+
+  // Rhetoric
+  { id:126, text:"Speak clearly, if you speak at all; carve every word before you let it fall.", meaning:"Words released carelessly cannot be recalled. Treat every sentence as a finished object — deliberate, shaped, and intended — or do not release it.", attribution:"Oliver Wendell Holmes Sr.", category:"rhetoric" },
+  { id:127, text:"First learn the meaning of what you say, and then speak.", meaning:"Most speech is performed before it is understood. The Stoic discipline reverses the order: comprehension first, expression second — which silences most of what people say.", attribution:"Epictetus", category:"rhetoric" },
+  { id:128, text:"The most powerful weapon on earth is the human soul on fire.", meaning:"Conviction outperforms every material advantage. Armies, budgets, and institutions are ultimately moved — or stopped — by people who believe totally in what they are doing.", attribution:"Ferdinand Foch", category:"rhetoric" },
+
+  // Literary
+  { id:129, text:"All animals are equal, but some animals are more equal than others.", meaning:"The corruption of every egalitarian revolution, compressed into one sentence. Power does not abolish hierarchy — it rewrites the language until hierarchy sounds like equality.", attribution:"George Orwell", source:"Animal Farm", category:"literary" },
+  { id:130, text:"Beware; for I am fearless, and therefore powerful.", meaning:"The creature's warning to its maker: fear is the lever by which people are controlled, and the person who has nothing left to lose cannot be moved by it. Fearlessness is power in its rawest form.", attribution:"Mary Shelley", source:"Frankenstein", category:"literary" },
+  { id:131, text:"Hell is empty and all the devils are here.", meaning:"Evil is not elsewhere — not in some other realm, some other country, some other institution. The capacity for it walks around in ordinary human form, in whatever room you are standing in.", attribution:"William Shakespeare", source:"The Tempest", category:"literary" },
+  { id:132, text:"Not all those who wander are lost.", meaning:"Apparent aimlessness and actual aimlessness are different things. Some paths only look like drift from the outside — the deep game is invisible to spectators who mistake motion toward an unseen goal for no goal at all.", attribution:"J.R.R. Tolkien", source:"The Fellowship of the Ring", category:"literary" },
+
+  // Classical
+  { id:133, text:"Carthago delenda est.", meaning:"Carthage must be destroyed. Cato ended every speech with this sentence, whatever the topic, until Rome finally acted. The model of message discipline: one demand, repeated without variation, until it becomes policy.", attribution:"Cato the Elder", category:"classical" },
+  { id:134, text:"Festina lente.", meaning:"Make haste slowly. Augustus's paradoxical motto: urgency in purpose, deliberateness in execution. Speed that produces errors is not speed — the fastest path is the one you don't have to walk twice.", attribution:"Augustus", category:"classical" },
+  { id:135, text:"Vincit qui se vincit.", meaning:"He conquers who conquers himself. Every external victory is downstream of an internal one — over impulse, fear, laziness, and appetite. The first opponent is always in the mirror.", attribution:"Latin proverb", category:"classical" },
+  { id:136, text:"Memento mori.", meaning:"Remember that you will die. Whispered to triumphant Roman generals at the height of their glory. Not morbidity but calibration — mortality is the deadline that gives every ambition its urgency and every vanity its absurdity.", attribution:"Latin phrase", category:"classical" },
+
+  // Morality
+  { id:137, text:"Waste no more time arguing about what a good man should be. Be one.", meaning:"Ethical debate can become a substitute for ethical action — an infinite postponement dressed as diligence. At some point the philosophy is complete and the only remaining step is conduct.", attribution:"Marcus Aurelius", source:"Meditations", category:"morality" },
+  { id:138, text:"The best revenge is to be unlike him who performed the injury.", meaning:"Retaliation makes you a student of your enemy — you learn his methods and repeat them. The only revenge that costs him something and you nothing is to remain what he could not make you.", attribution:"Marcus Aurelius", source:"Meditations", category:"morality" },
+  { id:139, text:"Conscience is the inner voice that warns us somebody may be looking.", meaning:"Mencken's acid test for moral seriousness: much of what passes for virtue is merely surveillance-awareness. The real measure of character is behavior when discovery is impossible.", attribution:"H.L. Mencken", category:"morality" },
+
+  // Conflict
+  { id:140, text:"Never wrestle with pigs. You both get dirty and the pig likes it.", meaning:"Some opponents win simply by dragging you into their arena. Engaging on their terms costs you standing they never had — the strategic move is to refuse the fight entirely.", attribution:"George Bernard Shaw (attributed)", category:"conflict" },
+  { id:141, text:"War is the continuation of politics by other means.", meaning:"Violence is never separate from negotiation — it is negotiation at a different intensity. Every conflict is still a conversation about terms, which is why wars end at tables.", attribution:"Carl von Clausewitz", source:"On War", category:"conflict" },
+  { id:142, text:"The hottest places in hell are reserved for those who, in times of great moral crisis, maintain their neutrality.", meaning:"Neutrality in a genuine crisis is not abstention — it is a vote for the stronger side. History judges the bystander with the participants, because inaction was itself an action.", attribution:"Attributed to Dante Alighieri", category:"conflict" },
+
+  // Ambition
+  { id:143, text:"A man's reach should exceed his grasp, or what's a heaven for?", meaning:"Aiming only at the achievable is a quiet form of surrender. The purpose of an ideal is not to be reached but to pull you past what you would otherwise have settled for.", attribution:"Robert Browning", source:"Andrea del Sarto", category:"ambition" },
+  { id:144, text:"I would rather be first in a village than second in Rome.", meaning:"Caesar's confession, passing through a small alpine town: rank matters more than arena. Some people are built to lead, and for them subordination anywhere is worse than sovereignty somewhere small.", attribution:"Julius Caesar (attributed)", category:"ambition" },
+  { id:145, text:"Hitch your wagon to a star.", meaning:"Attach your daily work to something enormous. Small goals produce small efforts — the size of the ambition sets the ceiling on the energy you can summon for it.", attribution:"Ralph Waldo Emerson", category:"ambition" },
 ]

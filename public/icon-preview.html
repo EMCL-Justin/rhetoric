@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0e0e1a; display: flex; align-items: center; justify-content: center; min-height: 100vh; gap: 28px; font-family: -apple-system, sans-serif; flex-wrap: wrap; padding: 32px; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .label { color: #555; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
+  canvas { border-radius: 22.5%; display: block; }
+</style>
+</head>
+<body>
+<div class="col"><canvas id="a" width="240" height="240"></canvas><div class="label">A</div></div>
+<div class="col"><canvas id="b" width="240" height="240"></canvas><div class="label">B</div></div>
+<div class="col"><canvas id="c" width="240" height="240"></canvas><div class="label">C</div></div>
+<div class="col"><canvas id="d" width="240" height="240"></canvas><div class="label">D</div></div>
+<script>
+const GOLD='#e0b84a',DARK='#0c0c12';
+// A: serif R
+(function(){const ctx=document.getElementById('a').getContext('2d');ctx.fillStyle=DARK;ctx.fillRect(0,0,240,240);ctx.fillStyle=GOLD;ctx.font='700 158px Georgia,serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('R',122,126);})();
+// B: single open quote
+(function(){const ctx=document.getElementById('b').getContext('2d');ctx.fillStyle=DARK;ctx.fillRect(0,0,240,240);ctx.fillStyle=GOLD;ctx.font='400 220px Georgia,serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('\u201C',124,108);})();
+// C: RHET stacked
+(function(){const ctx=document.getElementById('c').getContext('2d');ctx.fillStyle=DARK;ctx.fillRect(0,0,240,240);ctx.fillStyle=GOLD;ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='800 86px -apple-system,sans-serif';ctx.fillText('RH',120,100);ctx.fillText('ET',120,156);ctx.fillStyle='rgba(224,184,74,0.3)';ctx.fillRect(50,128,140,1);})();
+// D: podium
+(function(){const ctx=document.getElementById('d').getContext('2d');ctx.fillStyle=DARK;ctx.fillRect(0,0,240,240);ctx.fillStyle=GOLD;const cx=120;ctx.beginPath();ctx.moveTo(cx-68,88);ctx.lineTo(cx+68,88);ctx.lineTo(cx+52,148);ctx.lineTo(cx-52,148);ctx.closePath();ctx.fill();ctx.fillRect(cx-10,148,20,42);ctx.beginPath();ctx.moveTo(cx-44,190);ctx.lineTo(cx+44,190);ctx.lineTo(cx+52,200);ctx.lineTo(cx-52,200);ctx.closePath();ctx.fill();ctx.fillStyle=DARK;ctx.fillRect(cx-28,100,56,36);})();
+</script>
+</body>
+</html>

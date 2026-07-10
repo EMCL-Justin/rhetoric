@@ -7,24 +7,20 @@ function toSlug(phrase) {
 }
 
 const phrase = PHRASES[Math.floor(Math.random() * PHRASES.length)]
-const url = `https://rhetoricapp.netlify.app/phrase/${toSlug(phrase)}`
+const url = `https://rhetoric.gg/phrase/${toSlug(phrase)}`
 
-const res = await fetch('https://api.pushover.net/1/messages.json', {
+const res = await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC}`, {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    token: process.env.PUSHOVER_TOKEN,
-    user:  process.env.PUSHOVER_USER,
-    title: `— ${phrase.attribution}`,
-    message: phrase.text,
-    url,
-    url_title: 'Study this phrase →',
-  }),
+  headers: {
+    'Title': `— ${phrase.attribution}`,
+    'Tags': 'speech_balloon',
+    'Click': url,
+  },
+  body: phrase.text,
 })
 
-const data = await res.json()
-if (data.status !== 1) {
-  console.error('Pushover error:', data)
+if (!res.ok) {
+  console.error('ntfy error:', res.status, await res.text())
   process.exit(1)
 }
 console.log(`Sent: "${phrase.text.slice(0, 60)}..."`)

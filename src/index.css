@@ -21,7 +21,10 @@
   --border:       rgba(255,255,255,0.14);
   --radius:       16px;
   --glow:         rgba(224,184,74,0.07);
-  --serif:        'Fraunces', Georgia, 'Times New Roman', serif;
+  /* Display serif: decorative elements only (wordmark, ornaments).
+     Reading text stays on Georgia — it's hinted for Windows screens and stays crisp. */
+  --serif-display: 'Fraunces', Georgia, serif;
+  --serif:         Georgia, 'Times New Roman', serif;
 }
 
 [data-theme="light"] {
@@ -73,7 +76,7 @@ html, body, #root {
   position: relative;
 }
 .header-wordmark {
-  font-family: var(--serif);
+  font-family: var(--serif-display);
   font-size: 17px;
   font-weight: 550;
   letter-spacing: 0.26em;
@@ -210,7 +213,7 @@ html, body, #root {
   position: absolute;
   top: -6px;
   right: 14px;
-  font-family: var(--serif);
+  font-family: var(--serif-display);
   font-size: 110px;
   line-height: 1;
   color: var(--gold);
@@ -362,7 +365,7 @@ html, body, #root {
   position: absolute;
   top: -4px;
   left: 18px;
-  font-family: var(--serif);
+  font-family: var(--serif-display);
   font-size: 96px;
   line-height: 1;
   color: var(--gold);

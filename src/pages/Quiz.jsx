@@ -34,13 +34,18 @@ function buildQuiz(srs, phrases) {
   const picks = shuffle(pool).slice(0, Math.min(QUIZ_LEN, pool.length))
 
   return picks.map((p, i) => {
-    let type = ['meaning', 'cloze', 'author'][i % 3]
+    // Author-matching is the favorite format — it gets half of every quiz.
+    let type = ['author', 'meaning', 'author', 'cloze'][i % 4]
     if (type === 'cloze' && clozeCandidates(p.text).length === 0) type = 'meaning'
 
     if (type === 'author') {
-      const others = shuffle(
-        [...new Set(phrases.map(x => x.attribution))].filter(a => a !== p.attribution)
-      ).slice(0, 3)
+      // Prefer authors from the same category so the choices are plausible
+      // rivals, then fill from the full author pool.
+      const sameCat = [...new Set(phrases.filter(x => x.category === p.category).map(x => x.attribution))]
+        .filter(a => a !== p.attribution)
+      const rest = [...new Set(phrases.map(x => x.attribution))]
+        .filter(a => a !== p.attribution && !sameCat.includes(a))
+      const others = [...shuffle(sameCat), ...shuffle(rest)].slice(0, 3)
       return { type, phrase: p, prompt: `“${p.text}”`, options: shuffle([p.attribution, ...others]), answer: p.attribution }
     }
 

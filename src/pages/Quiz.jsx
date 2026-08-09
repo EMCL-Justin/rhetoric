@@ -84,7 +84,12 @@ export default function Quiz() {
   function pick(opt) {
     if (picked !== null) return
     setPicked(opt)
-    if (opt !== q.answer) setMisses(m => [...m, { q, picked: opt }])
+    if (opt !== q.answer) {
+      setMisses(m => [...m, { q, picked: opt }])
+    } else {
+      // Correct: flash green briefly, then advance on our own — no Next click.
+      setTimeout(next, 700)
+    }
   }
 
   function next() {
@@ -138,11 +143,9 @@ export default function Quiz() {
         })}
       </div>
 
-      {picked !== null && (
+      {picked !== null && picked !== q.answer && (
         <>
-          {picked !== q.answer && (
-            <div className="quiz-reveal">— {q.phrase.attribution}</div>
-          )}
+          <div className="quiz-reveal">— {q.phrase.attribution}</div>
           <button className="cta-btn" onClick={next}>
             {idx + 1 >= questions.length ? 'See Results' : 'Next'}
           </button>

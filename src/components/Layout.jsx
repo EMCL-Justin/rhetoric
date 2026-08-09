@@ -22,6 +22,7 @@ export default function Layout({ children }) {
       <nav className="tabs">
         <NavLink to="/" end className={({ isActive }) => `tab${isActive ? ' active' : ''}`}>Daily</NavLink>
         <NavLink to="/study"   className={({ isActive }) => `tab${isActive ? ' active' : ''}`}>Study</NavLink>
+        <NavLink to="/quiz"    className={({ isActive }) => `tab${isActive ? ' active' : ''}`}>Quiz</NavLink>
         <NavLink to="/library" className={({ isActive }) => `tab${isActive ? ' active' : ''}`}>Library</NavLink>
       </nav>
       <div className="tab-line" />

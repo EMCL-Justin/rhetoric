@@ -4,6 +4,7 @@ import Layout from './components/Layout'
 import Daily from './pages/Daily'
 import Study from './pages/Study'
 import Library from './pages/Library'
+import Quiz from './pages/Quiz'
 import Phrase from './pages/Phrase'
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
             <Route path="/"           element={<Daily />} />
             <Route path="/study"      element={<Study />} />
             <Route path="/library"    element={<Library />} />
+            <Route path="/quiz"       element={<Quiz />} />
             <Route path="/phrase/:slug" element={<Phrase />} />
           </Routes>
         </Layout>

@@ -685,3 +685,105 @@ a.ghost-btn { display: block; text-align: center; text-decoration: none; }
   color: var(--muted);
   font-size: 15px;
 }
+
+/* =====================
+   QUIZ
+   ===================== */
+.quiz-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.quiz-count {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.quiz-type {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.quiz-prompt {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.quiz-prompt.is-meaning {
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--text-soft);
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.quiz-option {
+  padding: 14px 18px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, opacity 0.15s;
+}
+.quiz-option:hover { border-color: var(--gold-border); }
+.quiz-option.correct {
+  background: var(--green-dim);
+  border-color: var(--green-border);
+  color: var(--green);
+}
+.quiz-option.wrong {
+  background: var(--red-dim);
+  border-color: var(--red-border);
+  color: var(--red);
+}
+.quiz-option.dim { opacity: 0.4; }
+
+.quiz-reveal {
+  text-align: center;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.quiz-misses {
+  text-align: left;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+.quiz-miss + .quiz-miss {
+  border-top: 1px solid var(--border);
+  margin-top: 14px;
+  padding-top: 14px;
+}
+.quiz-miss-phrase {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.quiz-miss-detail { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.miss-picked { color: var(--red); }
+.miss-answer { color: var(--green); }

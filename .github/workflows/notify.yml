@@ -9,6 +9,9 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write   # needed for the keepalive step below
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,3 +20,10 @@ jobs:
       - run: node notify.js
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      # GitHub disables scheduled workflows after 60 days without repo activity.
+      # Re-enabling the workflow via the API counts as activity and resets that
+      # timer, so this step keeps the schedule alive forever with no dummy commits.
+      - name: Keepalive
+        run: gh workflow enable notify.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
